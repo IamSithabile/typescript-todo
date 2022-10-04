@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ToDos from "./components/ToDos";
+import ToDo from "./models/ToDo";
 
-function App() {
+const App = () => {
+  const todos = [
+    new ToDo("Learn and master React"),
+    new ToDo("Learn and master Typescript"),
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ToDos items={todos} />
     </div>
   );
-}
+};
 
 export default App;
